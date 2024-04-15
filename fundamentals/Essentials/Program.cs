@@ -1,6 +1,6 @@
-// Source: https://www.youtube.com/watch?v=yjUCKSKCQxg
+// Source:https://www.youtube.com/watch?v=yjUCKSKCQxg
 
-// LastStop : https://youtu.be/yjUCKSKCQxg?si=3STicj5vr1UFFycC&t=439
+// LastStop:https://youtu.be/yjUCKSKCQxg?si=Ddhr4YBxOT6uG124&t=544
 
 using Essentials.Services;
 
@@ -21,5 +21,15 @@ public class Program {
 		app.MapControllers();
 
 		app.Run();
+
+		//ServiceCollection services = [];
+
+		//services.AddTransient<NumbersService>();
+
+		//var ServiceProvider = services.BuildServiceProvider();
+
+		//var controller = ServiceProvider.GetRequiredService<NumbersService>();
+
+		//controller.GetNumber().Dump();
 	}
 }
