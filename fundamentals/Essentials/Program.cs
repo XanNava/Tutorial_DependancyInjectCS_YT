@@ -1,7 +1,8 @@
 // Source:https://www.youtube.com/watch?v=yjUCKSKCQxg
 
-// LastStop:https://youtu.be/yjUCKSKCQxg?si=UfpJ6TFZnMHKs6RH&t=791
+// LastStop:https://youtu.be/yjUCKSKCQxg?si=PfCLWFjVlsl2I-MR&t=1116
 
+using Essentials.Client;
 using Essentials.Services;
 
 namespace Essentials;
@@ -10,7 +11,8 @@ public class Program {
 	public static void Main(string[] args) {
 		var builder = WebApplication.CreateBuilder(args);
 		{
-			builder.Services.AddTransient<INumbersService, NumbersService>();
+			builder.Services.AddSingleton<INumbersService, NumbersService>();
+			builder.Services.AddSingleton<NumbersClient>();
 
 			// Scan project for all controllers and register them(plus some other stuff).
 			builder.Services.AddControllers();

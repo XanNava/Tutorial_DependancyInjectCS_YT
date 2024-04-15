@@ -1,9 +1,16 @@
-﻿namespace Essentials.Services;
+﻿using Essentials.Client;
+
+namespace Essentials.Services;
 
 public class NumbersService : INumbersService {
-	private readonly int _number = new Random().Next(0, 100);
+
+	public NumbersService(NumbersClient numbersClient) {
+		_numbersClient = numbersClient;
+	}
+
+	private readonly NumbersClient _numbersClient;
 	public int GetNumber() {
-		return _number;
+		return _numbersClient.GetNumber();
 	}
 }
 
